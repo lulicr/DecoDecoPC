@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decor Decor · Polco Deco</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <div>
+            <p class="brand-title">Decor Decor</p>
+            <p class="brand-subtitle">Polco Deco PWA · Cozy Creator</p>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="pill" id="theme-toggle" aria-pressed="false">Modo oscuro</button>
+          <button class="pill">Iniciar sesión</button>
+          <button class="pill primary">Crear cuenta</button>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="profile-card">
+            <div class="avatar">DD</div>
+            <div>
+              <p class="label">Hola,</p>
+              <p class="value">Luna</p>
+              <p class="meta">Coleccionista nivel 3</p>
+            </div>
+          </div>
+
+          <div class="coins-card">
+            <p class="label">Decor Coins</p>
+            <p class="coins" id="coins-value">1,250</p>
+            <button class="pill" id="daily-reward">Reclamar +100</button>
+          </div>
+
+          <nav class="nav">
+            <button class="nav-link active" data-view="dashboard">Dashboard</button>
+            <button class="nav-link" data-view="editor">Editor</button>
+            <button class="nav-link" data-view="gacha">Gachapon</button>
+            <button class="nav-link" data-view="inventory">Inventario</button>
+            <button class="nav-link" data-view="profile">Perfil</button>
+          </nav>
+        </aside>
+
+        <main class="main">
+          <section class="view active" id="dashboard">
+            <div class="hero">
+              <div>
+                <p class="label">Tu espacio cozy</p>
+                <h1>Decora tu photocard con calma y magia.</h1>
+                <p class="meta">
+                  Guarda diseños en la nube, colecciona stickers y abre cápsulas suaves con rarezas.
+                </p>
+                <div class="hero-actions">
+                  <button class="pill primary" data-view-trigger="editor">Abrir editor</button>
+                  <button class="pill" data-view-trigger="gacha">Abrir cápsula</button>
+                </div>
+              </div>
+              <div class="hero-card">
+                <p class="label">Proyecto destacado</p>
+                <div class="photo-frame">
+                  <div class="photo-content">
+                    <span class="tag">85:55</span>
+                    <p>Polco Deco</p>
+                    <small>Dreamy summer set</small>
+                  </div>
+                </div>
+                <div class="hero-stats">
+                  <div>
+                    <p class="label">Stick. usados</p>
+                    <p class="value">12</p>
+                  </div>
+                  <div>
+                    <p class="label">Texturas</p>
+                    <p class="value">3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid">
+              <div class="card">
+                <p class="label">Acceso rápido</p>
+                <h3>Continuar proyectos</h3>
+                <p class="meta">2 borradores pendientes</p>
+                <button class="pill">Ver galería</button>
+              </div>
+              <div class="card">
+                <p class="label">Misión diaria</p>
+                <h3>Completa 1 decoración</h3>
+                <p class="meta">Recompensa: +150 coins</p>
+                <button class="pill">Ir al editor</button>
+              </div>
+              <div class="card">
+                <p class="label">Colección</p>
+                <h3>Nuevos stickers</h3>
+                <p class="meta">3 ultrararos disponibles</p>
+                <button class="pill">Explorar</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="view" id="editor">
+            <div class="section-header">
+              <div>
+                <p class="label">Editor de Photocards</p>
+                <h2>Mesa de trabajo 85:55</h2>
+                <p class="meta">Arrastra, rota y escala stickers con Fabric.js.</p>
+              </div>
+              <div class="section-actions">
+                <button class="pill">Subir foto</button>
+                <button class="pill">Guardar draft</button>
+                <button class="pill primary">Finalizar</button>
+              </div>
+            </div>
+
+            <div class="editor-layout">
+              <div class="toolbox">
+                <h4>Herramientas</h4>
+                <button class="tool">Mover</button>
+                <button class="tool">Rotar</button>
+                <button class="tool">Escalar</button>
+                <button class="tool">Duplicar</button>
+                <button class="tool">Eliminar</button>
+                <div class="divider"></div>
+                <h4>Texturas</h4>
+                <button class="chip">Plástico</button>
+                <button class="chip">Holograma</button>
+                <button class="chip">Brillo</button>
+              </div>
+
+              <div class="canvas-area">
+                <div class="canvas-frame">
+                  <div class="canvas-inner">
+                    <div class="sticker sticker-1">★</div>
+                    <div class="sticker sticker-2">♡</div>
+                    <div class="sticker sticker-3">✿</div>
+                    <p>Tu photocard aquí</p>
+                  </div>
+                </div>
+                <div class="canvas-footer">
+                  <span class="tag">85:55 · 1020x660px</span>
+                  <span class="tag">Textura: Holograma suave</span>
+                </div>
+              </div>
+
+              <div class="layers">
+                <h4>Capas</h4>
+                <div class="layer">Foto base</div>
+                <div class="layer">Sticker estrella</div>
+                <div class="layer">Texto “Dreamy”</div>
+                <div class="layer">Holograma</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="view" id="gacha">
+            <div class="section-header">
+              <div>
+                <p class="label">Gachapon</p>
+                <h2>Abre una cápsula cozy</h2>
+                <p class="meta">Común 70% · Raro 20% · Ultra Raro 10%</p>
+              </div>
+              <button class="pill primary" id="open-gacha">Abrir cápsula</button>
+            </div>
+
+            <div class="gacha-stage">
+              <div class="capsule"></div>
+              <div class="reward">
+                <p class="label">Última recompensa</p>
+                <h3 id="gacha-result">--</h3>
+                <p class="meta" id="gacha-rarity">---</p>
+                <div class="gacha-canvas">
+                  <canvas id="gacha-canvas" width="220" height="220" aria-label="Sticker obtenido"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="view" id="inventory">
+            <div class="section-header">
+              <div>
+                <p class="label">Inventario</p>
+                <h2>Tu colección</h2>
+                <p class="meta">Stickers organizados por rareza.</p>
+              </div>
+              <button class="pill">Filtrar</button>
+            </div>
+            <div class="grid">
+              <div class="card">
+                <p class="label">Comunes</p>
+                <h3 id="inventory-common">24</h3>
+                <p class="meta">Sets básicos</p>
+              </div>
+              <div class="card">
+                <p class="label">Raros</p>
+                <h3 id="inventory-rare">7</h3>
+                <p class="meta">Acabados especiales</p>
+              </div>
+              <div class="card">
+                <p class="label">Ultra raros</p>
+                <h3 id="inventory-ultra">3</h3>
+                <p class="meta">Ediciones limitadas</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="view" id="profile">
+            <div class="section-header">
+              <div>
+                <p class="label">Perfil</p>
+                <h2>Estadísticas</h2>
+                <p class="meta">Resumen de progreso y hábitos.</p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="card">
+                <p class="label">Stickers coleccionados</p>
+                <h3>128</h3>
+              </div>
+              <div class="card">
+                <p class="label">Proyectos finalizados</p>
+                <h3>12</h3>
+              </div>
+              <div class="card">
+                <p class="label">Racha diaria</p>
+                <h3>5 días</h3>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
