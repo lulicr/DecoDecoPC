@@ -12,7 +12,7 @@ python -m http.server 8000
 Luego visita `http://localhost:8000` en tu navegador.
 
 ## Contenido
-- `index.html`, `styles.css`, `app.js`: demo visual del dashboard/editor/gachapon con modo oscuro.
+- `index.html`, `styles.css`, `app.js`: demo visual del dashboard/editor/gachapon.
 - `docs/PRODUCT_VISION.md`: visión, objetivos y principios del producto.
 - `docs/UX_UI_GUIDE.md`: lineamientos visuales y de UX.
 - `docs/MVP_SCOPE.md`: alcance del MVP y funcionalidades core.

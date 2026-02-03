@@ -7,37 +7,6 @@
   --terracotta: #c7896e;
   --shadow: 0 20px 45px rgba(92, 74, 61, 0.18);
   --radius: 25px;
-  --surface: #ffffff;
-  --surface-muted: var(--sand);
-  --surface-soft: var(--cream);
-  --text-primary: var(--coffee);
-  --text-muted: rgba(111, 91, 70, 0.7);
-  --outline: rgba(111, 91, 70, 0.12);
-}
-
-body.theme-dark {
-  --cream: #1f1a16;
-  --sand: #2a221c;
-  --latte: #3a2f26;
-  --coffee: #f4e7d8;
-  --moss: #9fb29a;
-  --terracotta: #d9a08b;
-  --shadow: 0 20px 45px rgba(10, 8, 6, 0.45);
-  --surface: #241e18;
-  --surface-muted: #2e261f;
-  --surface-soft: #1f1a16;
-  --text-primary: #f4e7d8;
-  --text-muted: rgba(244, 231, 216, 0.7);
-  --outline: rgba(244, 231, 216, 0.12);
-}
-
-body.theme-dark .photo-content {
-  background: linear-gradient(135deg, #2b241d, #3a2f26);
-  color: var(--text-primary);
-}
-
-body.theme-dark .gacha-canvas canvas {
-  box-shadow: 0 12px 24px rgba(10, 8, 6, 0.45);
 }
 
 * {
@@ -48,7 +17,7 @@ body {
   margin: 0;
   font-family: "Nunito", "Poppins", "Segoe UI", sans-serif;
   background: var(--cream);
-  color: var(--text-primary);
+  color: var(--coffee);
 }
 
 .app-shell {
@@ -101,7 +70,7 @@ body {
 }
 
 .sidebar {
-  background: var(--surface);
+  background: white;
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
@@ -114,7 +83,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--surface-muted);
+  background: var(--sand);
   border-radius: var(--radius);
   padding: 16px;
 }
@@ -123,14 +92,14 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 16px;
-  background: var(--surface);
+  background: white;
   display: grid;
   place-items: center;
   font-weight: 700;
 }
 
 .coins-card {
-  background: var(--surface-soft);
+  background: var(--cream);
   border-radius: var(--radius);
   padding: 16px;
   display: grid;
@@ -154,7 +123,7 @@ body {
   padding: 12px 16px;
   border-radius: 16px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--coffee);
   cursor: pointer;
 }
 
@@ -179,7 +148,7 @@ body {
 }
 
 .hero {
-  background: var(--surface);
+  background: white;
   border-radius: var(--radius);
   padding: 28px;
   display: grid;
@@ -194,7 +163,7 @@ body {
 }
 
 .hero-card {
-  background: var(--surface-muted);
+  background: var(--sand);
   border-radius: var(--radius);
   padding: 20px;
   display: grid;
@@ -202,7 +171,7 @@ body {
 }
 
 .photo-frame {
-  background: var(--surface);
+  background: white;
   border-radius: 22px;
   padding: 16px;
 }
@@ -229,7 +198,7 @@ body {
 }
 
 .card {
-  background: var(--surface);
+  background: white;
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
@@ -241,8 +210,8 @@ body {
   border: none;
   padding: 10px 18px;
   border-radius: 999px;
-  background: var(--surface-muted);
-  color: var(--text-primary);
+  background: var(--sand);
+  color: var(--coffee);
   font-weight: 600;
   cursor: pointer;
 }
@@ -285,22 +254,20 @@ body {
   border: none;
   padding: 10px 12px;
   border-radius: 16px;
-  background: var(--surface-soft);
+  background: var(--cream);
   cursor: pointer;
-  color: var(--text-primary);
 }
 
 .chip {
-  border: 1px solid var(--outline);
-  background: var(--surface);
+  border: 1px solid var(--sand);
+  background: white;
   padding: 8px 12px;
   border-radius: 16px;
-  color: var(--text-primary);
 }
 
 .divider {
   height: 1px;
-  background: var(--outline);
+  background: var(--sand);
   margin: 8px 0;
 }
 
@@ -310,7 +277,7 @@ body {
 }
 
 .canvas-frame {
-  background: var(--surface);
+  background: white;
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
@@ -362,15 +329,15 @@ body {
 }
 
 .tag {
-  background: var(--surface);
+  background: white;
   padding: 6px 12px;
   border-radius: 16px;
   font-size: 12px;
-  color: var(--text-muted);
+  color: rgba(111, 91, 70, 0.7);
 }
 
 .layer {
-  background: var(--surface-soft);
+  background: var(--cream);
   border-radius: 14px;
   padding: 8px 10px;
 }
@@ -392,35 +359,17 @@ body {
 }
 
 .reward {
-  background: var(--surface);
+  background: white;
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow);
-  display: grid;
-  gap: 12px;
-}
-
-.gacha-canvas {
-  background: var(--surface-soft);
-  border-radius: 18px;
-  padding: 12px;
-  display: grid;
-  place-items: center;
-}
-
-.gacha-canvas canvas {
-  width: 180px;
-  height: 180px;
-  border-radius: 14px;
-  background: var(--surface);
-  box-shadow: 0 12px 24px rgba(111, 91, 70, 0.18);
 }
 
 .label {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(111, 91, 70, 0.6);
   margin: 0;
 }
 
@@ -431,7 +380,7 @@ body {
 
 .meta {
   margin: 6px 0 0;
-  color: var(--text-muted);
+  color: rgba(111, 91, 70, 0.7);
 }
 
 @media (max-width: 1100px) {
